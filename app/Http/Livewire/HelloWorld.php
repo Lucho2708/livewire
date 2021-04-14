@@ -7,8 +7,16 @@ use Livewire\Component;
 class HelloWorld extends Component
 {
     public $name = 'Luis';
-    public $loud = false;
-    public $greeting = ['Hello'];
+
+    public function mount($name)
+    {
+        $this->name = $name ;
+    }
+
+    public function updatedName()
+    {
+        $this->name = strtoupper($this->name);
+    }
 
     public function render()
     {
