@@ -11,4 +11,8 @@
     </select>
 
     {{implode(', ',$greeting)}} {{ $name }} @if($loud) ! @endif
+
+    <form action="#" wire:submit.prevent="$set('name', 'Bingo')">
+        <button>Resert</button>
+    </form>
 </div>
