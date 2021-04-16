@@ -9,6 +9,8 @@ class HelloWorld extends Component
 {
     public $contacts;
 
+    protected $listeners = ['foo'=>'$refresh'];
+
     public function mount()
     {
         $this->contacts = Contact::all();
@@ -25,4 +27,5 @@ class HelloWorld extends Component
     {
         return view('livewire.hello-world');
     }
+
 }
